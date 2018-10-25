@@ -16,7 +16,11 @@ func main() {
 
 }
 
-func calc(f func(int, int) int, a int, b int) int {
+// 원형 정의
+type calculator func(int, int) int
+
+// calculator 원형 사용
+func calc(f calculator, a int, b int) int {
 	result := f(a, b)
 	return result
 }
